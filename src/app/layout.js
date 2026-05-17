@@ -15,6 +15,9 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata = {
   title: "Gulshan",
   description: "Full Stack Web Developer",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({ children }) {
