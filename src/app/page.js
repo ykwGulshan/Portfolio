@@ -1,66 +1,170 @@
-import Image from "next/image";
+"use client";
+
 import styles from "./page.module.css";
 
+import { motion, useScroll, useTransform } from "motion/react";
+import Navbar from "@/src/components/Navbar";
+import Services from "@/src/components/Services";
+import Showcase from "@/src/components/Showcase";
+import BackendShowcase from "@/src/components/Backend";
+import Process from "@/src/components/Process";
+import FinalCTA from "@/src/components/Final";
+import About from "@/src/components/About";
+import Projects from "@/src/components/Projects";
+import Contact from "@/src/components/Contacts";
+import Footer from "@/src/components/Footer";
+
+import Image from "next/image";
+import Globe from "@/public/images/globe.png";
+
 export default function Home() {
+  const { scrollY } = useScroll();
+
+  // ROTATE GLOBE ON SCROLL
+  const rotate = useTransform(scrollY, [0, 1000], [0, 40]);
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
+    <>
+      <Navbar />
+      <main className={styles.hero}>
+        {/* LEFT */}
+
+        <motion.div
+          className={styles.left}
+          initial={{
+            opacity: 0,
+            y: 40,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 1,
+            ease: "easeOut",
+          }}
+        >
+          <span className={styles.smallText}>GULSHAN</span>
+
+          <h1>
+            Freelance <br />
+            <motion.span
+              className={styles.gradientText}
+              initial="hidden"
+              animate="visible"
+            >
+              {"Web Developer".split("").map((char, index) => (
+                <motion.span
+                  key={index}
+                  variants={{
+                    hidden: {
+                      opacity: 0,
+                      y: 20,
+                    },
+
+                    visible: {
+                      opacity: 1,
+                      y: 0,
+                    },
+                  }}
+                  transition={{
+                    delay: index * 0.05,
+                    duration: 0.5,
+                  }}
+                  style={{
+                    display: "inline-block",
+                    color: "transparent",
+                  }}
+                >
+                  {char === " " ? "\u00A0" : char}
+                </motion.span>
+              ))}
+            </motion.span>
+          </h1>
+
           <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
+            Upgrade your online presence with a unique, expertly created, and
+            reasonably priced website.
           </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+
+          {/* BUTTONS */}
+
+          <motion.div
+            className={styles.buttons}
+            initial={{
+              opacity: 0,
+              y: 20,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              delay: 0.4,
+              duration: 0.8,
+            }}
           >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+            <a href="#Contact" className={styles.primary}>Get In Touch</a>
+          </motion.div>
+        </motion.div>
+
+        {/* RIGHT */}
+
+        <motion.div
+          className={styles.right}
+          style={{
+            rotate,
+          }}
+        >
+          <Image
+            src={Globe}
+            alt="Globe"
+            className={styles.globe}
+            width={500}
+            height={500}
+            priority
+          />
+
+          <div className={`${styles.tag} ${styles.dev}`}>Development ✦</div>
+
+          <div className={`${styles.tag} ${styles.design}`}>Web Design ✦</div>
+
+          <div className={`${styles.tag} ${styles.brand}`}>Branding ✦</div>
+        </motion.div>
       </main>
-    </div>
+
+      <section id="About">
+        <About />
+      </section>
+
+      <section id="Services">
+        <Services />
+      </section>
+
+      <section id="Showcase">
+        <Showcase />
+      </section>
+
+      <section id="BackendShowcase">
+        <BackendShowcase />
+      </section>
+
+      <section id="Projects">
+        <Projects />
+      </section>
+      <section id="Process">
+        <Process />
+      </section>
+
+      <section id="FinalCTA">
+        <FinalCTA />
+      </section>
+
+      <section id="Contact">
+        <Contact />
+      </section>
+      
+      <Footer />
+    </>
   );
 }

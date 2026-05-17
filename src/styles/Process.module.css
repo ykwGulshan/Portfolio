@@ -1,0 +1,332 @@
+/* components/Process/Process.module.css */
+
+.process {
+  position: relative;
+
+  padding:
+    10rem 8%;
+
+  background:
+    #050505;
+
+  overflow: hidden;
+}
+
+/* LIGHT */
+
+.light {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform:
+    translate(-50%, -50%);
+
+  width: 1000px;
+  height: 1000px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(139,92,246,0.08),
+      transparent 70%
+    );
+
+  filter: blur(140px);
+
+  pointer-events: none;
+}
+
+/* TOP */
+
+.top {
+  position: relative;
+  z-index: 2;
+
+  text-align: center;
+
+  max-width: 760px;
+
+  margin:
+    0 auto 8rem;
+}
+
+.label {
+  display: inline-block;
+
+  margin-bottom: 1rem;
+
+  font-size: 0.82rem;
+  font-weight: 600;
+
+  letter-spacing: 0.35em;
+
+  color: #9b5cff;
+}
+
+.top h2 {
+  font-size: clamp(3rem, 7vw, 5.5rem);
+
+  line-height: 0.92;
+  letter-spacing: -0.06em;
+
+  color: white;
+
+  margin-bottom: 1.5rem;
+}
+
+.top h2 span {
+  background:
+    linear-gradient(
+      90deg,
+      #60a5fa,
+      #8b5cf6,
+      #d946ef
+    );
+
+  background-clip: text;
+  color: transparent;
+}
+
+.top p {
+  max-width: 580px;
+
+  margin: auto;
+
+  line-height: 1.9;
+
+  color:
+    rgba(255,255,255,0.62);
+
+  font-size: 1.02rem;
+}
+
+/* TIMELINE */
+
+.timeline {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 5rem;
+}
+
+/* CENTER LINE */
+
+.line {
+  position: absolute;
+
+  left: 50%;
+  top: 0;
+
+  transform:
+    translateX(-50%);
+
+  width: 2px;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      to bottom,
+      transparent,
+      #8b5cf6,
+      #d946ef,
+      transparent
+    );
+
+  border-radius: 999px;
+}
+
+/* STEP */
+
+.step {
+  position: relative;
+
+  width: 100%;
+
+  display: flex;
+}
+
+.left {
+  justify-content: flex-start;
+}
+
+.right {
+  justify-content: flex-end;
+}
+
+/* DOT */
+
+.dot {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  transform:
+    translate(-50%, -50%);
+
+  width: 22px;
+  height: 22px;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #60a5fa,
+      #8b5cf6,
+      #d946ef
+    );
+
+  box-shadow:
+    0 0 30px rgba(168,85,247,0.65);
+
+  z-index: 3;
+}
+
+/* CARD */
+
+.card {
+  position: relative;
+
+  width: 44%;
+
+  padding: 2rem;
+
+  border-radius: 32px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(20,20,24,0.9),
+      rgba(10,10,12,0.96)
+    );
+
+  border:
+    1px solid rgba(255,255,255,0.06);
+
+  overflow: hidden;
+
+  transition: 0.35s ease;
+}
+
+.card::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(168,85,247,0.14),
+      transparent 45%
+    );
+
+  opacity: 0;
+
+  transition: 0.35s ease;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+/* NUMBER */
+
+.number {
+  display: inline-block;
+
+  margin-bottom: 1.3rem;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  color:
+    rgba(255,255,255,0.38);
+}
+
+/* TITLE */
+
+.card h3 {
+  font-size: 2rem;
+
+  line-height: 1;
+
+  letter-spacing: -0.05em;
+
+  color: white;
+
+  margin-bottom: 1rem;
+}
+
+/* DESC */
+
+.card p {
+  line-height: 1.8;
+
+  color:
+    rgba(255,255,255,0.62);
+
+  max-width: 420px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+  .timeline {
+    gap: 3rem;
+  }
+
+  .line {
+    left: 12px;
+  }
+
+  .step {
+    justify-content: flex-start;
+  }
+
+  .dot {
+    left: 12px;
+
+    width: 18px;
+    height: 18px;
+  }
+
+  .card {
+    width: 100%;
+
+    margin-left: 3rem;
+  }
+}
+
+@media (max-width: 700px) {
+
+  .process {
+    padding:
+      7rem 6%;
+  }
+
+  .top {
+    margin-bottom: 5rem;
+  }
+
+  .top h2 {
+    line-height: 1;
+  }
+
+  .card {
+    padding: 1.7rem;
+
+    border-radius: 26px;
+  }
+
+  .card h3 {
+    font-size: 1.7rem;
+  }
+}
