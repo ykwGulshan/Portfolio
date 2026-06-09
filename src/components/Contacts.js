@@ -253,7 +253,7 @@ export default function Contact() {
             <span>GitHub</span>
 
             <h4>
-              why do u wanna know? bleh
+              ykwGulshan
             </h4>
 
           </motion.a>
