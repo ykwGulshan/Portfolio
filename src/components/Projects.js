@@ -229,9 +229,10 @@ export default function Projects() {
 
                 </motion.button>
 
-                <motion.button
+                <motion.a
 
                   className={styles.secondary}
+                  href={"/rebound"}
 
                   whileHover={{
                     scale: 1.05,
@@ -244,7 +245,7 @@ export default function Projects() {
 
                   Case Study
 
-                </motion.button>
+                </motion.a>
 
               </div>
 
