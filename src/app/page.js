@@ -18,10 +18,6 @@ import Image from "next/image";
 import Globe from "@/public/images/globe.png";
 
 export default function Home() {
-  const { scrollY } = useScroll();
-
-  // ROTATE GLOBE ON SCROLL
-  const rotate = useTransform(scrollY, [0, 1000], [0, 40]);
 
   return (
     <>
@@ -112,9 +108,17 @@ export default function Home() {
 
         <motion.div
           className={styles.right}
-          style={{
-            rotate,
-          }}
+          
+        animate={{
+          y: [0, -18, 0],
+          rotate: [0, 8, 0],
+        }}
+
+        transition={{
+          duration: 6,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
         >
           <Image
             src={Globe}

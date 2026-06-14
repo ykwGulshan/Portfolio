@@ -86,16 +86,16 @@ export default function Contact() {
         {/* TITLE */}
 
         <h2>
-          Let’s create
+          Let&apos;s create
           <span> something modern.</span>
         </h2>
 
         {/* TEXT */}
 
         <p>
-          Whether it’s a business website,
+          Whether it&apos;s a business website,
           startup landing page, or a complete digital experience,
-          I’m open to building something unique and visually powerful.
+          I&apos;m open to building something unique and visually powerful.
 
         </p>
 
@@ -193,7 +193,7 @@ export default function Contact() {
 
           <motion.a
 
-            href="tel:+91XXXXXXXXXX"
+            href="tel:+917210006074"
 
             target="_blank"
 
@@ -207,7 +207,7 @@ export default function Contact() {
             <span>Phone</span>
 
             <h4>
-              +91 XXXXX XXXXX
+              +91 7210006074
             </h4>
 
           </motion.a>
@@ -216,7 +216,7 @@ export default function Contact() {
 
           <motion.a
 
-            href="https://wa.me/91XXXXXXXXXX"
+            href="https://wa.me/917210006074"
 
             target="_blank"
 
@@ -230,7 +230,7 @@ export default function Contact() {
             <span>WhatsApp</span>
 
             <h4>
-              +91 XXXXX XXXXX
+              +91 7210006074
             </h4>
 
           </motion.a>
@@ -239,7 +239,7 @@ export default function Contact() {
 
           <motion.a
 
-            href="https://github.com"
+            href="https://github.com/ykwGulshan"
 
             target="_blank"
 

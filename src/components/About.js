@@ -1,6 +1,8 @@
 // components/About/About.jsx
 
 "use client";
+import Image from "next/image";
+import Profile from "@/public/images/profile.png";
 
 import styles from "@/src/styles/About.module.css";
 
@@ -72,31 +74,8 @@ export default function About() {
           {/* YOUR IMAGE */}
 
           <div className={styles.imagePlaceholder}>
-            MY <br />
-            PHOTO <br />
-            HERE
+            <Image src={Profile} alt="Profile" width={420} height={560} />
           </div>
-
-          {/* FLOATING TAG */}
-
-          <motion.div
-
-            className={styles.floating}
-
-            animate={{
-              y: [0, -12, 0],
-            }}
-
-            transition={{
-              duration: 5,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          >
-
-            Based in India 🇮🇳
-
-          </motion.div>
 
         </motion.div>
 
@@ -157,8 +136,6 @@ export default function About() {
           <span> digital experiences.</span>
 
         </motion.h2>
-
-        {/* TEXT */}
 
         <motion.p
 

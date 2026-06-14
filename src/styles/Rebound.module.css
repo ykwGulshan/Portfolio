@@ -1,0 +1,1016 @@
+/* ========================================= */
+/* PAGE */
+/* ========================================= */
+
+.page {
+  position: relative;
+
+  background: #050505;
+
+  color: white;
+
+  overflow: hidden;
+}
+
+.page::before {
+  content: "";
+
+  position: fixed;
+
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(168,85,247,0.08),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 80% 10%,
+      rgba(59,130,246,0.08),
+      transparent 40%
+    );
+
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ========================================= */
+/* GLOBAL */
+/* ========================================= */
+
+.page section {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(1400px, 90%);
+
+  margin-inline: auto;
+
+  padding: 8rem 0;
+}
+
+.page span {
+  display: block;
+}
+
+.page section > span {
+  color: #8b5cf6;
+
+  letter-spacing: 4px;
+
+  font-size: 0.8rem;
+
+  margin-bottom: 1rem;
+}
+
+.page h2 {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+
+  line-height: 1;
+
+  margin-bottom: 1.5rem;
+
+  font-family: var(--space);
+}
+
+.page p {
+  color: rgba(255,255,255,0.7);
+
+  line-height: 1.8;
+}
+
+/* ========================================= */
+/* HERO */
+/* ========================================= */
+
+.hero {
+  min-height: 100vh;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+
+  gap: 4rem;
+}
+
+.heroGlow {
+  position: absolute;
+
+  width: 700px;
+  height: 700px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(168,85,247,0.2),
+      transparent 70%
+    );
+
+  filter: blur(120px);
+
+  top: -200px;
+  right: -100px;
+}
+
+.heroLeft h1 {
+  font-size: clamp(4rem, 10vw, 8rem);
+
+  line-height: 0.9;
+
+  font-family: var(--space);
+
+  margin-bottom: 1rem;
+}
+
+.heroLeft h2 {
+  background:
+    linear-gradient(
+      135deg,
+      #60a5fa,
+      #d946ef
+    );
+
+  background-clip: text;
+
+  color: transparent;
+
+  margin-bottom: 2rem;
+}
+
+.heroLeft p {
+  max-width: 600px;
+}
+
+.stats {
+  margin-top: 3rem;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 1rem;
+}
+
+.stat {
+  padding: 1rem 1.3rem;
+
+  border-radius: 20px;
+
+  background:
+    rgba(255,255,255,0.04);
+
+  border:
+    1px solid rgba(255,255,255,0.06);
+
+  backdrop-filter: blur(20px);
+}
+
+.heroRight {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.heroRight img {
+  width: 100%;
+  height: 100%;
+
+  filter:
+    drop-shadow(
+      0 0 50px rgba(168,85,247,0.35)
+    );
+}
+
+/* ========================================= */
+/* PROBLEM */
+/* ========================================= */
+
+.problem {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 4rem;
+}
+
+.problemCards {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1.5rem;
+}
+
+.problemCard {
+  padding: 2rem;
+
+  border-radius: 24px;
+
+  background:
+    rgba(255,255,255,0.03);
+
+  border:
+    1px solid rgba(255,255,255,0.06);
+
+  backdrop-filter: blur(20px);
+
+  transition: 0.35s ease;
+}
+
+.problemCard:hover {
+  transform:
+    translateY(-8px);
+
+  border-color:
+    rgba(168,85,247,0.3);
+}
+
+/* ========================================= */
+/* IDEA */
+/* ========================================= */
+
+.idea {
+  text-align: center;
+}
+
+.flow {
+  margin-top: 5rem;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 2rem;
+
+  flex-wrap: wrap;
+}
+
+.node,
+.nodePrimary {
+  min-width: 220px;
+
+  padding: 2rem;
+
+  border-radius: 24px;
+
+  background:
+    rgba(255,255,255,0.03);
+
+  border:
+    1px solid rgba(255,255,255,0.06);
+
+  text-align: center;
+}
+
+.nodePrimary {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(59,130,246,0.25),
+      rgba(217,70,239,0.25)
+    );
+
+  border:
+    1px solid rgba(168,85,247,0.3);
+}
+
+.line {
+  width: 100px;
+  height: 2px;
+
+  background:
+    linear-gradient(
+      to right,
+      #60a5fa,
+      #d946ef
+    );
+}
+
+/* ========================================= */
+/* TRUST */
+/* ========================================= */
+
+.timeline {
+  margin-top: 4rem;
+
+  display: grid;
+
+  grid-template-columns: repeat(5, 1fr);
+
+  gap: 1.5rem;
+}
+
+.timeline div {
+  padding: 2rem;
+
+  text-align: center;
+
+  border-radius: 24px;
+
+  background:
+    rgba(255,255,255,0.03);
+
+  border:
+    1px solid rgba(255,255,255,0.06);
+}
+
+/* ========================================= */
+/* PLATFORM */
+/* ========================================= */
+
+/* ========================================= */
+/* PLATFORM */
+/* ========================================= */
+
+.platform {
+  text-align: center;
+}
+
+.platformText {
+  max-width: 700px;
+
+  margin:
+    1.5rem auto 0;
+
+  color:
+    rgba(255,255,255,0.7);
+}
+
+/* ========================================= */
+/* ORBIT */
+/* ========================================= */
+
+.orbitContainer {
+  position: relative;
+
+  width: 100%;
+
+  height: 700px;
+
+  margin-top: 6rem;
+}
+
+/* CENTER */
+
+.centerOrbWrapper {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  z-index: 5;
+}   
+
+.centerOrb {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  transform:
+    translate(-50%, -50%);
+
+  width: 240px;
+  height: 240px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.3rem;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(59,130,246,0.18),
+      rgba(168,85,247,0.22)
+    );
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(30px);
+
+  box-shadow:
+    0 0 80px rgba(168,85,247,0.35);
+
+  z-index: 5;
+}
+
+/* SMALL ORBS */
+
+.orb {
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 600;
+
+  background:
+    rgba(255,255,255,0.04);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(25px);
+
+  transition: 0.35s ease;
+
+  cursor: default;
+}
+
+.orb:hover {
+  transform: scale(1.08);
+
+  border-color:
+    rgba(168,85,247,0.4);
+
+  box-shadow:
+    0 0 40px rgba(168,85,247,0.25);
+}
+
+/* POSITIONS */
+
+.student {
+  top: 5%;
+  left: 15%;
+}
+
+.teacher {
+  top: 5%;
+  right: 15%;
+}
+
+.parent {
+  bottom: 5%;
+  left: 15%;
+}
+
+.admin {
+  bottom: 5%;
+  right: 15%;
+}
+
+/* CONNECTION LINES */
+
+.line1,
+.line2,
+.line3,
+.line4 {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  height: 2px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(59,130,246,0.5),
+      rgba(217,70,239,0.5)
+    );
+
+  transform-origin: left center;
+
+  opacity: 0.5;
+}
+
+.line1 {
+  width: 230px;
+
+  transform:
+    rotate(-145deg);
+}
+
+.line2 {
+  width: 230px;
+
+  transform:
+    rotate(-35deg);
+}
+
+.line3 {
+  width: 230px;
+
+  transform:
+    rotate(145deg);
+}
+
+.line4 {
+  width: 230px;
+
+  transform:
+    rotate(35deg);
+}
+
+/* ========================================= */
+/* SHOWCASE */
+/* ========================================= */
+
+.showcase {
+  margin-top: 8rem;
+}
+
+.showcaseGrid {
+  margin-top: 5rem;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 2rem;
+}
+
+.showcaseCard {
+  position: relative;
+
+  padding: 3rem;
+
+  overflow: hidden;
+
+  border-radius: 32px;
+
+  background:
+    rgba(255,255,255,0.03);
+
+  border:
+    1px solid rgba(255,255,255,0.06);
+
+  backdrop-filter: blur(25px);
+
+  transition: 0.35s ease;
+}
+
+.showcaseCard:hover {
+  border-color:
+    rgba(168,85,247,0.25);
+}
+
+.bigNumber {
+  position: absolute;
+
+  right: 20px;
+  top: -20px;
+
+  font-size: 8rem;
+
+  font-weight: 800;
+
+  color:
+    rgba(255,255,255,0.04);
+
+  line-height: 1;
+}
+
+.showcaseCard h3 {
+  font-size: 1.8rem;
+
+  margin-bottom: 1.5rem;
+
+  font-family: var(--space);
+}
+
+.showcaseCard ul {
+  list-style: none;
+
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 1rem;
+}
+
+.showcaseCard li {
+  color:
+    rgba(255,255,255,0.72);
+}
+
+/* ========================================= */
+/* STATS */
+/* ========================================= */
+
+.platformStats {
+  margin-top: 8rem;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 2rem;
+}
+
+.platformStats div {
+  text-align: center;
+}
+
+.platformStats h3 {
+  font-size:
+    clamp(
+      4rem,
+      8vw,
+      7rem
+    );
+
+  line-height: 1;
+
+  margin-bottom: 0.5rem;
+
+  font-family: var(--space);
+
+  background:
+    linear-gradient(
+      135deg,
+      #60a5fa,
+      #d946ef
+    );
+
+  background-clip: text;
+
+  color: transparent;
+}
+
+.platformStats p {
+  color:
+    rgba(255,255,255,0.65);
+}
+
+/* ========================================= */
+/* RESPONSIVE */
+/* ========================================= */
+
+@media (max-width: 1100px) {
+
+  .showcaseGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .platformStats {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+
+  .orbitContainer {
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 2rem;
+  }
+
+  .centerOrb,
+  .orb {
+    position: static;
+
+    transform: none !important;
+  }
+
+  .line1,
+  .line2,
+  .line3,
+  .line4 {
+    display: none;
+  }
+
+  .centerOrb {
+    order: -1;
+  }
+}
+
+@media (max-width: 700px) {
+
+  .platformStats {
+    grid-template-columns: 1fr;
+  }
+
+  .centerOrb {
+    width: 190px;
+    height: 190px;
+  }
+
+  .orb {
+    width: 150px;
+    height: 150px;
+  }
+
+  .bigNumber {
+    font-size: 5rem;
+  }
+}
+
+/* ========================================= */
+/* BUILD */
+/* ========================================= */
+
+.build {
+  text-align: center;
+}
+
+.techOrbit {
+  margin-top: 5rem;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  gap: 1rem;
+}
+
+.techOrbit span {
+  padding: 1rem 1.5rem;
+
+  border-radius: 999px;
+
+  background:
+    rgba(255,255,255,0.04);
+
+  border:
+    1px solid rgba(255,255,255,0.06);
+
+  transition: 0.3s ease;
+}
+
+.techOrbit span:hover {
+  transform:
+    translateY(-6px);
+
+  border-color:
+    rgba(168,85,247,0.4);
+}
+
+/* ========================================= */
+/* CHALLENGES */
+/* ========================================= */
+
+.challengeGrid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 2rem;
+
+  margin-top: 4rem;
+}
+
+.challengeCard {
+  padding: 2.5rem;
+
+  border-radius: 28px;
+
+  background:
+    rgba(255,255,255,0.03);
+
+  border:
+    1px solid rgba(255,255,255,0.06);
+
+  transition: 0.35s ease;
+}
+
+.challengeCard:hover {
+  transform:
+    translateY(-10px);
+
+  border-color:
+    rgba(168,85,247,0.3);
+}
+
+.challengeCard h3 {
+  margin-bottom: 1rem;
+
+  font-family: var(--space);
+}
+
+/* ========================================= */
+/* IMPACT */
+/* ========================================= */
+
+.impact {
+  text-align: center;
+}
+
+.metrics {
+  margin-top: 5rem;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 2rem;
+}
+
+.metrics div {
+  padding: 3rem;
+
+  border-radius: 30px;
+
+  background:
+    rgba(255,255,255,0.03);
+
+  border:
+    1px solid rgba(255,255,255,0.06);
+}
+
+.metrics h3 {
+  font-size: 4rem;
+
+  background:
+    linear-gradient(
+      135deg,
+      #60a5fa,
+      #d946ef
+    );
+
+  background-clip: text;
+
+  color: transparent;
+}
+
+/* ========================================= */
+/* DESIGN */
+/* ========================================= */
+
+.palette {
+  margin-top: 4rem;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 1rem;
+}
+
+.palette div {
+  height: 220px;
+
+  border-radius: 24px;
+}
+
+.blue {
+  background: #3b82f6;
+}
+
+.purple {
+  background: #a855f7;
+}
+
+.dark {
+  background: #080808;
+  border: 1px solid #222;
+}
+
+.light {
+  background: #ffffff;
+}
+
+/* ========================================= */
+/* VISION */
+/* ========================================= */
+
+.vision {
+  text-align: center;
+
+  padding-bottom: 10rem !important;
+}
+
+.vision h2 {
+  font-size:
+    clamp(
+      4rem,
+      11vw,
+      9rem
+    );
+
+  line-height: 0.95;
+
+  margin-bottom: 2rem;
+}
+
+.vision p {
+  max-width: 700px;
+
+  margin-inline: auto;
+
+  margin-bottom: 3rem;
+}
+
+.buttons {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 1rem;
+
+  flex-wrap: wrap;
+}
+
+.primaryBtn,
+.secondaryBtn {
+  padding:
+    1rem 1.8rem;
+
+  border-radius: 999px;
+
+  text-decoration: none;
+
+  font-weight: 600;
+}
+
+.primaryBtn {
+    position: relative;
+  background:
+    linear-gradient(
+      135deg,
+      #3b82f6,
+      #d946ef
+    );
+
+  color: white;
+} .primaryBtn::before {
+  content: "coming soon";
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1rem;
+  font-weight: 500;
+  min-width: 100px;
+}
+
+.secondaryBtn {
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  color: white;
+}
+
+/* ========================================= */
+/* MOBILE */
+/* ========================================= */
+
+@media (max-width: 1000px) {
+
+  .hero,
+  .problem,
+  .featureRow {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .challengeGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .palette {
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+  .flow {
+    flex-direction: column;
+  }
+
+  .line {
+    width: 2px;
+    height: 60px;
+  }
+}

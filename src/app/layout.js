@@ -32,9 +32,12 @@ export const metadata = {
     "Frontend Developer",
     "Freelance Web Developer",
     "Portfolio",
-    "UI Design",
     "Motion Design",
   ],
+
+  alternates: {
+    canonical: "https://ykwgulshan.vercel.app",
+  },
 
   authors: [
     {
@@ -97,7 +100,22 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
-      <body>{children}</body>
+      <body>
+        {children}
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Gulshan",
+              jobTitle: "Full Stack Web Developer",
+              url: "https://ykwgulshan.vercel.app",
+            }),
+          }}
+        />
+      </body>
     </html>
   );
 }

@@ -3,6 +3,8 @@
 "use client";
 
 import styles from "@/src/styles/Projects.module.css";
+import Image from "next/image";
+import Rebound from "@/public/images/rebound.png";
 
 import {
   motion,
@@ -19,6 +21,7 @@ const projects = [
     category: "Education Platform",
     desc:
       "A hyperlocal peer-to-peer tutoring platform with dashboards, attendance tracking, notes, and smart student-teacher systems.",
+    image: Rebound,
   },
 ];
 
@@ -156,9 +159,7 @@ export default function Projects() {
                 }}
               >
 
-                PROJECT
-                <br />
-                PREVIEW
+              <Image src={project.image} alt={project.title} fill className={styles.projectImage} />
 
               </motion.div>
 

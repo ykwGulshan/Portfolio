@@ -230,14 +230,12 @@ export default function FinalCTA() {
               scale: 0.96,
             }}
 
-            href="https://wa.me/91XXXXXXXXXX/?text=Hi,%20I%20would%20like%20to%20discuss%20a%20project%20with%20you."
+            href="https://wa.me/917210006074/?text=Hi,%20I%20would%20like%20to%20discuss%20a%20project%20with%20you."
           >
 
             Start a Project
 
           </motion.a>
-
-          {/* SECONDARY */}
 
           <motion.a
 
