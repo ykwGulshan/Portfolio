@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Gulshan Portfolio
 
-## Getting Started
+A modern portfolio website built to showcase my work, projects, and development skills.
 
-First, run the development server:
+## About
+
+This portfolio highlights my experience as a full stack web developer, featuring interactive user interfaces, motion-driven experiences, case studies, and selected projects.
+
+The website was designed and developed from scratch with a strong focus on performance, responsiveness, accessibility, and clean user experience.
+
+## Tech Stack
+
+* Next.js
+* React
+* JavaScript
+* Motion
+* CSS Modules
+* Vercel
+
+## Features
+
+* Modern responsive design
+* Smooth animations and motion interactions
+* Interactive project showcase
+* Detailed Rebound case study
+* Optimized SEO and metadata
+* Mobile-friendly experience
+* High Lighthouse scores
+
+## Project Structure
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+src/
+├── app/
+├── components/
+├── styles/
+├── public/
+└── utils/
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Performance
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+* Performance: 100 (Desktop)
+* Accessibility: 100
+* Best Practices: 96
+* SEO: 100
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Live Website
 
-## Learn More
+https://ykwgulshan.vercel.app
 
-To learn more about Next.js, take a look at the following resources:
+## Contact
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Feel free to reach out for collaborations, freelance projects, or opportunities.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Email: [gulshan.y0511@outlook.com](mailto:gulshan.y0511@outlook.com)
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Designed and developed by Gulshan.

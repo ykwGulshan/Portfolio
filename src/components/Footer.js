@@ -114,7 +114,7 @@ export default function Footer() {
           <div className={styles.links}>
 
             <motion.a
-              href="#"
+              href="https://www.instagram.com/gulshan_y0511/"
               whileHover={{
                 y: -3,
               }}
@@ -125,7 +125,7 @@ export default function Footer() {
             </motion.a>
 
             <motion.a
-              href="#"
+              href="https://github.com/ykwGulshan"
               whileHover={{
                 y: -3,
               }}
@@ -136,18 +136,18 @@ export default function Footer() {
             </motion.a>
 
             <motion.a
-              href="#"
+              href="tel:+917210006074"
               whileHover={{
                 y: -3,
               }}
             >
 
-              LinkedIn
+              Phone
 
             </motion.a>
 
             <motion.a
-              href="#"
+              href="mailto:gulshan.y0511@outlook.com"
               whileHover={{
                 y: -3,
               }}
